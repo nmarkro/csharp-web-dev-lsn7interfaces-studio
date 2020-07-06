@@ -1,11 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace SpinningDiscs
 {
-    public class CD
+    public class CD : BaseDisc, IOpticalDisc
     {
-        // TODO: Implement your custom interface.
+        public CD(string name, int totalSize, bool writeable) : base(name, totalSize, writeable)
+        {
+        }
 
-        // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
-        //  need to be declared separately. 
+        public void ReadDisc()
+        {
+            Console.WriteLine("Reading CD");
+        }
+
+        public void SpinDisc()
+        {
+            Console.WriteLine("A CD spins at a rate of 200 - 500 rpm.");
+        }
     }
 }
